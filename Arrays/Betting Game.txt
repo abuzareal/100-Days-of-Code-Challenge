@@ -1,0 +1,23 @@
+static int betBalance(String result)
+    {
+        int sum = 4;
+        int bet = 1;
+        int i;
+        char[] ch = result.toCharArray();
+        for(i = 0;i < ch.length && bet<=sum;i++){
+            if(ch[i]=='W'){
+                sum+=bet;
+                bet = 1;
+            }
+            
+            else{
+                sum-=bet;
+                bet=bet*2;
+            }
+            
+        }
+        if(i==ch.length)
+            return sum;
+        else
+            return -1;
+    }

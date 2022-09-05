@@ -1,0 +1,11 @@
+void reverseInGroups(ArrayList<Integer> arr, int n, int k) {
+        for(int i = 0;i < n; i += k){
+            if(n - i - 1 < k){
+                Collections.reverse(arr.subList(i,n));
+            }
+            
+            else{
+                Collections.reverse(arr.subList(i,i+k));
+            }
+        }
+    }

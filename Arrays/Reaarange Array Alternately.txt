@@ -1,0 +1,27 @@
+public static void rearrange(long arr[], int n){
+        // if(N%2==0)
+        //     long mid = (int)((arr[n-1]+arr[0])/2);
+        // else
+        //     long mid = (int)
+    
+        long cl[]= arr.clone();
+       int x=0;
+       int last=n-1;
+       int first=0;
+       
+       while(x<n)
+       {
+           if(x%2==0)
+           {
+               arr[x]=cl[last];
+               last--;
+               x++;
+           }
+           else
+           {
+               arr[x]=cl[first];
+               first++;
+               x++;
+           }
+       }
+    }

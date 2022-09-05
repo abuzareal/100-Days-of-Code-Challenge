@@ -1,0 +1,7 @@
+bool searchPattern(string str, string pat)
+{
+    // your code here
+    int found = str.find(pat);
+   if(found<str.length()) return true;
+   return false;
+}
