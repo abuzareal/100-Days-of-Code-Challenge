@@ -1,0 +1,4 @@
+public double cToF(int C)
+    {
+        return (9*C + 160) / 5;
+    }

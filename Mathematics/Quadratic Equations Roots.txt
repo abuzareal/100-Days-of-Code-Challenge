@@ -1,0 +1,15 @@
+public ArrayList<Integer> quadraticRoots(int a, int b, int c) {
+        ArrayList<Integer> x= new ArrayList<>();
+      double det=(b*b-4*a*c);
+      if(det<0)
+      {
+          x.add(-1);
+      }
+      else{
+          det=Math.sqrt(det);
+      double n=(-b+det)/(2*a);
+      double m=(-b-det)/(2*a);
+      x.add((int)Math.floor(Math.max(n,m)));
+      x.add((int)Math.floor(Math.min(n,m)));}
+      return x;
+    }

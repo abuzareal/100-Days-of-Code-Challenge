@@ -1,0 +1,7 @@
+static long multiplicationUnderModulo(long a, long b)
+    {
+        // add your code here
+        long s1 = a%(long)(Math.pow(10,9)+7);
+        long s2 = b%(long)(Math.pow(10,9)+7);
+        return (s1*s2)%(long)(Math.pow(10,9)+7);
+    }

@@ -1,0 +1,8 @@
+public double termOfGP(int a,int b,int n)
+    {
+        if(n==1){
+            return a;
+        }
+        
+        return termOfGP(a,b,n-1)*b/a;
+    }
