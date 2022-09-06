@@ -1,0 +1,25 @@
+static int majorityElement(int arr[], int size)
+    {
+        if(size==1) return arr[0];
+        Arrays.sort(arr);
+        int maxcount = 1,count=1,ele=arr[0],temp=arr[0],f=0;
+        for(int i = 1;i<size;i++){
+            if(temp==arr[i]){
+                count++;
+            }
+            else{
+                temp=arr[i];
+                count=1;
+            }
+            
+            if(maxcount<count){
+                maxcount=count;
+                ele = arr[i];
+                if(maxcount>size/2){
+                    f=1;
+                    break;
+                }
+            }
+        }
+        return (f==1?ele:-1);
+    }

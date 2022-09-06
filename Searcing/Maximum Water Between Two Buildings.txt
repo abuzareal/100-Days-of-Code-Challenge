@@ -1,0 +1,20 @@
+static int maxWater(int arr[], int n) 
+    { 
+        int i = 0; int j = n-1;
+        int sum = 0;int max=0;
+        while(i<j){
+            sum = Math.min(arr[i],arr[j]) * (j-i-1);
+            max = Math.max(sum,max);
+            if(arr[i] == arr[j]){
+                i++;
+                j--;
+            }
+            else if(arr[i]<arr[j])
+                i++;
+            
+            else
+                j--;
+            
+        }
+        return max;
+    } 

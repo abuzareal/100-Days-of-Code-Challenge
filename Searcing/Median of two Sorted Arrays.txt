@@ -1,0 +1,15 @@
+public static int findMedian(int arr[], int n, int brr[], int m)
+    {
+        ArrayList<Integer> a = new ArrayList<>();
+        for(int i:arr)
+            a.add(i);
+        for(int i:brr)
+            a.add(i);
+            
+        Collections.sort(a);
+        int x = n+m;
+        if(x%2==0){
+            return ((a.get(x/2)+a.get((x/2)-1))/2);
+        }
+        return a.get(x/2);
+    }
