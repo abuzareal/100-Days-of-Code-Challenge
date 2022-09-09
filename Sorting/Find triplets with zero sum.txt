@@ -1,0 +1,22 @@
+public boolean findTriplets(int arr[] , int n)
+    {
+        Arrays.sort(arr);
+        for(int i = 0;i < n-2;i++){
+            if(sum(arr,-arr[i],i+1))
+                return true;
+        }
+        return false;
+    }
+    
+    public boolean sum(int arr[],int x, int low){
+        int high = arr.length-1;
+        while(low<high){
+            if(arr[low]+arr[high]==x)
+                return true;
+            else if(arr[low]+arr[high]<x)
+                low++;
+            else
+                high--;
+        }
+        return false;
+    }

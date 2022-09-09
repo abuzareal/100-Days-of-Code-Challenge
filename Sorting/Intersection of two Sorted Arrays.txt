@@ -1,0 +1,16 @@
+ArrayList<Integer> res = new ArrayList<>();
+        int i = 0,j = 0;
+        while(i<n && j<m){
+            if(i>0 && a[i] ==a[i-1] || a[i]<b[j]){
+                i++;
+            }
+            else if(a[i]>b[j]){
+                j++;
+            }
+            else{
+                res.add(a[i]);
+                i++;
+                j++;
+            }
+        }
+        return res;

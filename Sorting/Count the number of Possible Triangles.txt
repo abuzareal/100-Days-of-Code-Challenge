@@ -1,0 +1,17 @@
+static int findNumberOfTriangles(int arr[], int n){
+        Arrays.sort(arr);
+        int res = 0;
+        for(int i = n-1;i>1;i--){
+            int j = 0;
+            int k = i-1;
+            while(j<k){
+                if(arr[j]+arr[k]>arr[i]){
+                    res += k-j;
+                    k--;
+                }
+                else
+                    j++;
+            }
+        }
+        return res;
+    }

@@ -1,0 +1,13 @@
+public static ArrayList<Integer> findUnion(int arr1[], int arr2[], int n, int m)
+    {
+        ArrayList<Integer> res = new ArrayList<>();
+        HashSet<Integer> hash = new HashSet<>();
+        for(int i:arr1)
+            hash.add(i);
+        for(int i:arr2)
+            hash.add(i);
+        for(int i:hash)
+            res.add(i);
+        Collections.sort(res);
+        return res;
+    }
